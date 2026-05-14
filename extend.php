@@ -1,11 +1,14 @@
 <?php
 
+/**
+ * GreenUI Theme for Flarum v2
+ */
+
 use Flarum\Extend;
 use Flarum\Frontend\Document;
 use Flarum\Settings\SettingsRepositoryInterface;
 
 return [
-
     (new Extend\Frontend('forum'))
         ->css(__DIR__ . '/less/forum.less'),
 
@@ -13,46 +16,46 @@ return [
         ->css(__DIR__ . '/less/admin.less'),
 
     (new Extend\Settings())
-        // (light)
-        ->default('green2ui.light.all_bg_color', '#ffffff')
-        ->default('green2ui.light.all_bg_color_hover', '#f7f7f7')
-        ->default('green2ui.light.header_bg', '#ffffff')
+        ->default('greenui.light.all_bg_color', '#ffffff')
+        ->default('greenui.light.all_bg_color_hover', '#f7f7f7')
+        ->default('greenui.light.header_bg', '#ffffff')
 
-        // (light-hc)
-        ->default('green2ui.light_hc.all_bg_color', '#ffffff')
-        ->default('green2ui.light_hc.all_bg_color_hover', '#e8f5f1')
-        ->default('green2ui.light_hc.header_bg', '#ffffff')
+        ->default('greenui.light_hc.all_bg_color', '#ffffff')
+        ->default('greenui.light_hc.all_bg_color_hover', '#e8f5f1')
+        ->default('greenui.light_hc.header_bg', '#ffffff')
 
-        // (dark)
-        ->default('green2ui.dark.all_bg_color', '#2c3332')
-        ->default('green2ui.dark.all_bg_color_hover', '#262b2b')
-        ->default('green2ui.dark.header_bg', '#2c3332')
+        ->default('greenui.dark.all_bg_color', '#2c3332')
+        ->default('greenui.dark.all_bg_color_hover', '#262b2b')
+        ->default('greenui.dark.header_bg', '#2c3332')
 
-        // (dark-hc)
-        ->default('green2ui.dark_hc.all_bg_color', '#000000')
-        ->default('green2ui.dark_hc.all_bg_color_hover', '#0a1a15')
-        ->default('green2ui.dark_hc.header_bg', '#000000'),
+        ->default('greenui.dark_hc.all_bg_color', '#000000')
+        ->default('greenui.dark_hc.all_bg_color_hover', '#0a1a15')
+        ->default('greenui.dark_hc.header_bg', '#000000'),
 
-    (new Extend\Frontend('forum'))
-        ->head(function (Document $document) {
+    (new Extend\Head('forum'))
+        ->add(function () {
             /** @var SettingsRepositoryInterface $settings */
             $settings = resolve(SettingsRepositoryInterface::class);
 
-            $lightBg = $settings->get('green2ui.light.all_bg_color', '#ffffff');
-            $lightBgHover = $settings->get('green2ui.light.all_bg_color_hover', '#f7f7f7');
-            $lightHeader = $settings->get('green2ui.light.header_bg', '#ffffff');
+            // Светлая
+            $lightBg = $settings->get('greenui.light.all_bg_color', '#ffffff');
+            $lightBgHover = $settings->get('greenui.light.all_bg_color_hover', '#f7f7f7');
+            $lightHeader = $settings->get('greenui.light.header_bg', '#ffffff');
 
-            $lightHcBg = $settings->get('green2ui.light_hc.all_bg_color', '#ffffff');
-            $lightHcBgHover = $settings->get('green2ui.light_hc.all_bg_color_hover', '#e8f5f1');
-            $lightHcHeader = $settings->get('green2ui.light_hc.header_bg', '#ffffff');
+            // Светлая HC
+            $lightHcBg = $settings->get('greenui.light_hc.all_bg_color', '#ffffff');
+            $lightHcBgHover = $settings->get('greenui.light_hc.all_bg_color_hover', '#e8f5f1');
+            $lightHcHeader = $settings->get('greenui.light_hc.header_bg', '#ffffff');
 
-            $darkBg = $settings->get('green2ui.dark.all_bg_color', '#2c3332');
-            $darkBgHover = $settings->get('green2ui.dark.all_bg_color_hover', '#262b2b');
-            $darkHeader = $settings->get('green2ui.dark.header_bg', '#2c3332');
+            // Тёмная
+            $darkBg = $settings->get('greenui.dark.all_bg_color', '#2c3332');
+            $darkBgHover = $settings->get('greenui.dark.all_bg_color_hover', '#262b2b');
+            $darkHeader = $settings->get('greenui.dark.header_bg', '#2c3332');
 
-            $darkHcBg = $settings->get('green2ui.dark_hc.all_bg_color', '#000000');
-            $darkHcBgHover = $settings->get('green2ui.dark_hc.all_bg_color_hover', '#0a1a15');
-            $darkHcHeader = $settings->get('green2ui.dark_hc.header_bg', '#000000');
+            // Тёмная HC
+            $darkHcBg = $settings->get('greenui.dark_hc.all_bg_color', '#000000');
+            $darkHcBgHover = $settings->get('greenui.dark_hc.all_bg_color_hover', '#0a1a15');
+            $darkHcHeader = $settings->get('greenui.dark_hc.header_bg', '#000000');
 
             $style = "
                 :root {
@@ -77,6 +80,6 @@ return [
                 }
             ";
 
-            $document->head[] = '<style id="green2ui-colors">' . $style . '</style>';
+            return '<style id="greenui-colors">' . $style . '</style>';
         }),
 ];
