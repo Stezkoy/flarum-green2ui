@@ -1,0 +1,32 @@
+{
+  "name": "stezkoy/flarum-green2ui",
+  "description": "Lightweight green theme for flarum v2",
+  "type": "flarum-extension",
+  "version": "1.2.9",
+  "license": "GPL-3.0",
+  "require": {
+    "flarum/core": "^2.0.0"
+  },
+  "authors": [
+    {
+      "name": "Stezkoy",
+      "email": "stezko@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/Stezkoy/flarum-green2ui/issues",
+    "source": "https://github.com/Stezkoy/flarum-green2ui"
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "Green2Ui",
+      "category": "theme",
+      "icon": {
+        "name": "fa-solid fa-mountain-city",
+        "backgroundColor": "#00a185",
+        "color": "#fff"
+      }
+    }
+  }
+}

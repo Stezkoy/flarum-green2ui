@@ -1,0 +1,605 @@
+/* Green2Ui Theme */
+@import "common.less";
+@import "hljs.less";
+
+:root {
+  & when (@config-dark-mode =false) {
+    --muted-color: #1b1b1b;
+    --muted-more-color: #4c555e;
+    --all-bg-color: #ffffff;
+    --all-bg-color-hover: #f7f7f7;
+    --text-color: #1b1b1b;
+    --green-shadow-box: 0 1px 4px rgba(88, 110, 101, 30%);
+    --button-color: #1b1b1b;
+    --header-bg: #ffffff;
+  }
+
+  & when (@config-dark-mode =true) {
+    --muted-color: #f1f1f1;
+    --muted-more-color: #dedede;
+    --all-bg-color: #2c3332;
+    --all-bg-color-hover: #262b2b;
+    --text-color: #f1f1f1;
+    --green-shadow-box: 0 1px 4px rgba(16, 16, 16, 30%);
+    --button-color: #f1f1f1;
+    --header-bg: #2c3332;
+  }
+}
+
+li {
+  border-radius: @border-radius !important;
+}
+
+.FlarumBlogOverview .BlogFeatured-list-item,
+.FlarumBlogOverview .BlogFeatured-list-item-top .dataItem,
+.FlarumBlog-Article-Content,
+.FlarumBlog-Article-Comments,
+.BlogSideWidget-item,
+.FlarumBlog-Article-Author {
+  border-radius: @border-radius !important;
+  box-shadow: unset !important;
+}
+
+.BlogSideWidget {
+  border-radius: @border-radius !important;
+  box-shadow: unset !important;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-bottom: 8px;
+}
+
+.FlarumBlog-Article-Author-background,
+.FlarumBlogItem
+  .FlarumBlog-Article
+  .FlarumBlog-Article-Container
+  .FlarumBlog-Article-Image {
+  border-radius: @border-radius @border-radius 0 0 !important;
+  box-shadow: unset !important;
+}
+
+.WelcomeHero {
+  color: #fdfdfd;
+  background: linear-gradient(
+    160deg,
+    var(--control-bg-shaded),
+    var(--button-primary-bg-hover)
+  );
+}
+
+.textinfo {
+  color: var(--text-color) !important;
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #00a185 transparent;
+}
+
+html::-webkit-scrollbar {
+  width: 10px;
+}
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #00a185;
+  border-radius: 4px;
+  min-width: 8px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background: #00d4a8;
+  box-shadow: 0 0 4px rgba(0, 161, 133, 0.4);
+}
+.CategoriesPage .topNav {
+  padding: 15px 0;
+  white-space: nowrap;
+  overflow: auto;
+  overscroll-behavior: auto;
+  -webkit-overflow-scrolling: touch;
+  float: none;
+  width: auto;
+  padding-top: 30px;
+
+  scrollbar-width: thin;
+  scrollbar-color: #00a185 transparent;
+}
+
+.CategoriesPage .topNav::-webkit-scrollbar {
+  height: 10px;
+}
+
+.CategoriesPage .topNav::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.CategoriesPage .topNav::-webkit-scrollbar-thumb {
+  background: #00a185;
+  border-radius: 3px;
+  min-height: 8px;
+}
+
+.CategoriesPage .topNav::-webkit-scrollbar-thumb:hover {
+  background: #00d4a8;
+  box-shadow: 0 0 4px rgba(0, 161, 133, 0.4);
+}
+
+body,
+#app .App-content {
+  background-color: var(--control-bg-light);
+}
+
+#drawer,
+#app-navigation {
+  & when (@config-colored-header =false) {
+    background-color: var(--control-bg-light);
+  }
+}
+
+.ForumStatistics.containerNarrow > .row > div {
+  background: var(--all-bg-color);
+  padding: 12px;
+  box-shadow: var(--green-shadow-box);
+  border-radius: @border-radius;
+  color: var(--text-color);
+}
+
+.ForumStatistics.containerNarrow > .row > h2 {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--text-color);
+}
+
+.AfruxWidgets-Widget-content {
+  border-radius: @border-radius !important;
+  background: var(--all-bg-color) !important;
+  box-shadow: var(--green-shadow-box);
+}
+
+.Button--link.LinksButton--label,
+.Afrux-NewsWidget,
+.AfruxWidgets-Widget-title {
+  color: var(--text-color) !important;
+}
+
+.item-like .Button--link .Button-label,
+.item-dislike .Button--link .Button-label,
+.item-reply .Button--link .Button-label {
+  display: none;
+}
+
+.item-discussion-views {
+  cursor: default;
+}
+
+.item-like .Button:before {
+  font-family:
+    "Font Awesome 5 Free", "Font Awesome 6 Free", "Font Awesome 6 Pro";
+  font-weight: 600;
+  font-size: 14px;
+  content: "\f164";
+  vertical-align: -1px;
+}
+
+.item-dislike .Button:before {
+  font-family:
+    "Font Awesome 5 Free", "Font Awesome 6 Free", "Font Awesome 6 Pro";
+  font-weight: 600;
+  font-size: 14px;
+  content: "\f165";
+  vertical-align: -3px;
+}
+
+.item-reply .Button--link:before {
+  font-family:
+    "Font Awesome 5 Free", "Font Awesome 6 Free", "Font Awesome 6 Pro";
+  font-weight: 600;
+  font-size: 15px;
+  content: "\f3e5";
+  margin-right: 4px;
+  vertical-align: -2px;
+}
+
+.PostStream {
+  border-radius: @border-radius;
+  margin-top: 4px;
+  padding: 4px 22px 4px 22px;
+  background-color: var(--all-bg-color);
+  box-shadow: var(--green-shadow-box);
+}
+
+.PostsUserPage {
+  border-radius: @border-radius;
+  margin-top: 4px;
+  padding: 12px 22px 12px 22px;
+  background-color: var(--all-bg-color);
+  box-shadow: var(--green-shadow-box);
+}
+
+.DiscussionListItem {
+  margin: 15px 0px 15px 0px;
+  border-radius: @border-radius !important;
+  background-color: var(--all-bg-color);
+  box-shadow: var(--green-shadow-box);
+}
+
+.DiscussionListItem-content {
+  border-radius: @border-radius !important;
+}
+
+.DiscussionListItem:hover {
+  background: var(--all-bg-color-hover);
+}
+
+.DiscussionList-loadMore {
+  margin-top: 4px;
+
+  @media @phone {
+    margin: 4px 8px;
+  }
+
+  .Button {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+aside.DiscussionPage-list {
+  padding: 4px;
+}
+
+.Slidable-content {
+  margin-top: 4px;
+}
+
+@media @phone {
+  .DiscussionListItem {
+    margin: 8px;
+  }
+}
+
+@media @tablet-up {
+  li.item-nav {
+    padding: 2px 12px 2px 12px;
+    border-radius: @border-radius;
+    background-color: var(--all-bg-color);
+    box-shadow: var(--green-shadow-box);
+  }
+
+  .SettingsPage,
+  .UserSecurityPage,
+  .MasqueradeRoot {
+    border-radius: @border-radius;
+    margin-top: 4px;
+    padding: 12px 22px 12px 22px;
+    background-color: var(--all-bg-color);
+    box-shadow: var(--green-shadow-box);
+  }
+}
+
+.Badge {
+  opacity: 0.9;
+  color: #fff;
+}
+
+.Badge--locked {
+  background: #1b1b1b;
+}
+
+.on.Checkbox--switch .Checkbox-display {
+  background: var(--button-primary-bg);
+}
+
+.on .Checkbox-display {
+  color: var(--button-primary-bg);
+}
+
+.Post-footer .item-bestAnswerPost {
+  background-color: rgba(0, 161, 133, 0.23) !important;
+}
+
+.Post--BestAnswer {
+  background: var(--button-primary-bg) !important;
+}
+
+.Badge--bestAnswer {
+  background-color: var(--button-primary-bg) !important;
+}
+
+.UserDirectoryList .UserCard--directory,
+.UserCard.UserCard--popover,
+.UserCard.Hero.UserHero {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.NotificationGrid td,
+.NotificationGrid th {
+  color: var(--text-color) !important;
+}
+
+.FormControl[type="email"],
+.FormControl[type="password"],
+.FormControl[type="text"] {
+  font-size: 13px !important;
+}
+
+.fa-circle {
+  color: var(--button-primary-bg) !important;
+}
+
+.emojionearea-category-title {
+  color: var(--text-color) !important;
+}
+
+.emojionearea-category-title,
+.emojionearea-picker,
+.emojionearea-filters {
+  background: var(--control-bg-light) !important;
+}
+
+.emojionearea-filter.active {
+  background: var(--button-primary-bg) !important;
+}
+
+.emojibtn:hover {
+  background-color: var(--button-primary-bg) !important;
+}
+
+#Combined-Shape,
+#Group-15 {
+  fill: var(--button-color) !important;
+}
+
+header.Hero.DiscussionHero,
+header.Hero.WelcomeHero {
+  border-radius: @border-radius;
+}
+
+.darkenBackground,
+.Hero {
+  border-radius: @border-radius;
+  box-shadow: var(--green-shadow-box);
+}
+
+.Hero {
+  margin: 12px;
+}
+
+.fancybox-gallery,
+a[data-fancybox="single"] > img {
+  border: 1px solid var(--control-bg-light) !important;
+}
+
+.fancybox__toolbar {
+  color: var(--button-primary-bg) !important;
+}
+
+.f-button svg {
+  stroke: var(--button-primary-bg) !important;
+}
+
+.tooltip-inner {
+  max-width: 400px;
+}
+
+.containerwb {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+.welcomebox-widget .backgrwbguest,
+.welcomebox-widget .backgrwb {
+  width: 200px !important;
+}
+.backgrwbguest,
+.backgrwb {
+  background: none !important;
+  box-shadow: none !important;
+  border-radius: 20px !important;
+  width: 200px !important;
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+ul.NotificationGroup-content {
+  & > li {
+    margin: 4px 8px;
+
+    & > a {
+      &.Notification {
+        border-radius: @border-radius;
+      }
+
+      &.unread .Notification-title:after {
+        content: "";
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        border-radius: 50%;
+        background-color: var(--primary-color);
+        transform: translateY(10%);
+        margin-left: 8px;
+      }
+    }
+  }
+}
+
+.Composer {
+  border-radius: 10px 10px 0 0;
+}
+
+.Composer.fof-upload-dragging {
+  background-color: var(--all-bg-color) !important;
+}
+
+.ComposerBody-loading {
+  border-radius: 10px;
+}
+
+.DiscussionListItem-title {
+  font-size: 18px;
+}
+
+.DiscussionListItem-info .item-excerpt {
+  margin-right: 10px !important;
+  font-size: 14px !important;
+  color: var(--muted-color) !important;
+}
+
+.social-settings > .fa-cog {
+  border-left: none !important;
+  width: 50% !important;
+}
+
+.cc-window {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  max-width: 90%;
+  background-color: var(--button-bg);
+  color: var(--button-color);
+  padding: 8px 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  z-index: 1000;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.cc-window:hover {
+  transform: translateX(-50%) translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.cc-message {
+  display: flex;
+  align-items: center;
+}
+
+.cc-message span {
+  margin-right: 5px;
+}
+
+.cc-message a {
+  display: contents;
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.cc-message::before {
+  content: "\f563";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.cc-compliance {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-radius: var(--border-radius);
+  background: var(--button-primary-bg);
+  margin-left: 5px;
+}
+
+.cc-compliance .cc-btn {
+  color: var(--button-inverted-bg);
+  white-space: nowrap;
+  padding: 8px 13px;
+}
+
+.cc-compliance .cc-btn:hover {
+  text-decoration: auto;
+}
+
+.MobileTab {
+  background: var(--control-bg-light) !important;
+  box-shadow: 0 -2px 6px var(--shadow-color) !important;
+}
+.MobileTab-items a,
+.MobileTab-items > li > .Button,
+.MobileTab-items > li > .Dropdown {
+  color: var(--button-color) !important;
+}
+
+.NotificationsDropdown .Dropdown-toggle .Button-label {
+  margin-left: 2px;
+}
+
+@media (min-width: 1400px) {
+  .container {
+    width: 1400px;
+  }
+}
+
+@media (min-width: 992px) {
+  .TagTiles > li {
+    width: 30% !important;
+    border-radius: @border-radius !important;
+    margin: 15px;
+  }
+
+  .sideNav,
+  .sideNav > ul {
+    margin-right: 30px;
+    width: 220px;
+  }
+
+  .AfruxWidgets-sideNavAlt {
+    margin-left: 30px;
+    width: 220px;
+  }
+
+  .Composer:not(.fullScreen) {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+  .TagTiles > li {
+    width: 45% !important;
+    border-radius: @border-radius !important;
+    margin: 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    padding-bottom: 55px;
+  }
+
+  .cc-window {
+    bottom: 60px;
+  }
+
+  .TagTiles > li {
+    border-radius: @border-radius !important;
+    margin: 15px;
+  }
+
+  .DiscussionListItem-title {
+    font-size: 14px;
+  }
+}
