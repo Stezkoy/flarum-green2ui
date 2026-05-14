@@ -152,9 +152,12 @@ body,
 
 #drawer,
 #app-navigation {
-  & when (@config-colored-header =false) {
-    background-color: var(--control-bg-light);
-  }
+  background-color: var(--control-bg-light);
+}
+
+[data-colored-header=true] #drawer,
+[data-colored-header=true] #app-navigation {
+  background-color: transparent;
 }
 
 .ForumStatistics.containerNarrow > .row > div {
