@@ -3,6 +3,8 @@
 @import "hljs.less";
 
 :root {
+  --primary-color: #00a185;
+  --secondary-color: #2e2e2e;
   --muted-color: #1b1b1b;
   --muted-more-color: #4c555e;
   --all-bg-color: #ffffff;
@@ -146,6 +148,7 @@ html::-webkit-scrollbar-thumb:hover {
 }
 
 body,
+.app,
 #app .App-content {
   background-color: var(--control-bg-light);
 }
@@ -181,8 +184,9 @@ body,
   box-shadow: var(--green-shadow-box);
 }
 
+#header-primary .LinksButton,
 .Button--link.LinksButton--label,
-.Fof-NewsWidget,
+.FoF-NewsWidget,
 .FofWidgets-Widget-title {
   color: var(--text-color) !important;
 }
@@ -557,8 +561,7 @@ ul.NotificationGroup-content {
 }
 
 .MobileTab {
-//   background: var(--control-bg-light) !important;
-  background: transparent !important;
+  background: var(--control-bg-light) !important;
   box-shadow: 0 -2px 6px var(--shadow-color) !important;
 }
 .MobileTab-items a,
