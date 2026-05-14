@@ -3,8 +3,6 @@
 @import "hljs.less";
 
 :root {
-  --primary-color: #00a185;
-  --secondary-color: #2e2e2e;
   --muted-color: #1b1b1b;
   --muted-more-color: #4c555e;
   --all-bg-color: #ffffff;
@@ -148,9 +146,8 @@ html::-webkit-scrollbar-thumb:hover {
 }
 
 body,
-.app,
 #app .App-content {
-  background-color: var(--control-bg-light);
+  background-color: var(--control-bg-light) !important;
 }
 
 #drawer,
