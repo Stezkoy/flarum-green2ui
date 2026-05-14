@@ -1,14 +1,11 @@
 <?php
 
-/**
- * GreenUI Theme for Flarum v2
- */
-
 use Flarum\Extend;
 use Flarum\Frontend\Document;
 use Flarum\Settings\SettingsRepositoryInterface;
 
 return [
+
     (new Extend\Frontend('forum'))
         ->css(__DIR__ . '/less/forum.less'),
 
@@ -32,27 +29,23 @@ return [
         ->default('greenui.dark_hc.all_bg_color_hover', '#0a1a15')
         ->default('greenui.dark_hc.header_bg', '#000000'),
 
-    (new Extend\Head('forum'))
-        ->add(function () {
+    (new Extend\Frontend('forum'))
+        ->content(function (Document $document) {
             /** @var SettingsRepositoryInterface $settings */
             $settings = resolve(SettingsRepositoryInterface::class);
 
-            // Светлая
             $lightBg = $settings->get('greenui.light.all_bg_color', '#ffffff');
             $lightBgHover = $settings->get('greenui.light.all_bg_color_hover', '#f7f7f7');
             $lightHeader = $settings->get('greenui.light.header_bg', '#ffffff');
 
-            // Светлая HC
             $lightHcBg = $settings->get('greenui.light_hc.all_bg_color', '#ffffff');
             $lightHcBgHover = $settings->get('greenui.light_hc.all_bg_color_hover', '#e8f5f1');
             $lightHcHeader = $settings->get('greenui.light_hc.header_bg', '#ffffff');
 
-            // Тёмная
             $darkBg = $settings->get('greenui.dark.all_bg_color', '#2c3332');
             $darkBgHover = $settings->get('greenui.dark.all_bg_color_hover', '#262b2b');
             $darkHeader = $settings->get('greenui.dark.header_bg', '#2c3332');
 
-            // Тёмная HC
             $darkHcBg = $settings->get('greenui.dark_hc.all_bg_color', '#000000');
             $darkHcBgHover = $settings->get('greenui.dark_hc.all_bg_color_hover', '#0a1a15');
             $darkHcHeader = $settings->get('greenui.dark_hc.header_bg', '#000000');
@@ -80,6 +73,6 @@ return [
                 }
             ";
 
-            return '<style id="greenui-colors">' . $style . '</style>';
+            $document->head[] = '<style id="greenui-colors">' . $style . '</style>';
         }),
 ];
