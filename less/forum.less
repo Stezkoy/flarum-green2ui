@@ -1,29 +1,27 @@
 /* Green2Ui Theme */
 @import "common.less";
-@import "hljs.less";
+/* @import "hljs.less"; */
 
 :root {
-  & when (@config-dark-mode =false) {
-    --muted-color: #1b1b1b;
-    --muted-more-color: #4c555e;
-    --all-bg-color: #ffffff;
-    --all-bg-color-hover: #f7f7f7;
-    --text-color: #1b1b1b;
-    --green-shadow-box: 0 1px 4px rgba(88, 110, 101, 30%);
-    --button-color: #1b1b1b;
-    --header-bg: #ffffff;
-  }
+  --muted-color: #1b1b1b;
+  --muted-more-color: #4c555e;
+  --all-bg-color: #ffffff;
+  --all-bg-color-hover: #f7f7f7;
+  --text-color: #1b1b1b;
+  --green-shadow-box: 0 1px 4px rgba(88, 110, 101, 30%);
+  --button-color: #1b1b1b;
+  --header-bg: #ffffff;
+}
 
-  & when (@config-dark-mode =true) {
-    --muted-color: #f1f1f1;
-    --muted-more-color: #dedede;
-    --all-bg-color: #2c3332;
-    --all-bg-color-hover: #262b2b;
-    --text-color: #f1f1f1;
-    --green-shadow-box: 0 1px 4px rgba(16, 16, 16, 30%);
-    --button-color: #f1f1f1;
-    --header-bg: #2c3332;
-  }
+[data-theme^=dark] {
+  --muted-color: #f1f1f1;
+  --muted-more-color: #dedede;
+  --all-bg-color: #2c3332;
+  --all-bg-color-hover: #262b2b;
+  --text-color: #f1f1f1;
+  --green-shadow-box: 0 1px 4px rgba(16, 16, 16, 30%);
+  --button-color: #f1f1f1;
+  --header-bg: #2c3332;
 }
 
 li {
