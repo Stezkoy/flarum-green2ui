@@ -181,11 +181,15 @@ body,
   box-shadow: var(--green-shadow-box);
 }
 
-#header-primary .LinksButton,
+#header-primary.LinksButton,
 .Button--link.LinksButton--label,
 .FoF-NewsWidget,
 .FofWidgets-Widget-title {
   color: var(--text-color) !important;
+}
+
+#header-primary.LinksButton.active {
+    color: var(--header-color) !important;
 }
 
 .item-like .Button--link .Button-label,
@@ -610,9 +614,6 @@ ul.NotificationGroup-content {
 }
 
 @media (max-width: 767px) {
-  body {
-    padding-bottom: 55px;
-  }
 
   .cc-window {
     bottom: 60px;
