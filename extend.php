@@ -1,5 +1,9 @@
 <?php
+
+namespace stezkoy\flarumgreen2ui;
+
 use Flarum\Extend;
+use Flarum\Frontend\Document;
 
 return [
     (new Extend\Frontend('forum'))
