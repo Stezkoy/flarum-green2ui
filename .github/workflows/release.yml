@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+
 jobs:
   release-on-push:
     runs-on: ubuntu-latest
@@ -16,5 +17,7 @@ jobs:
       - uses: rymndhng/release-on-push-action@master
         with:
           bump_version_scheme: patch
+          tag_prefix: ''
+          release_name_prefix: ''
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
