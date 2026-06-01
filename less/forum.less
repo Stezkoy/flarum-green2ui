@@ -11,6 +11,7 @@
   --green-shadow-box: 0 1px 4px rgba(88, 110, 101, 30%);
   --button-color: #1b1b1b;
   --header-bg: #ffffff;
+  --primary-color-hover: #00d4a8;
 }
 
 [data-theme^=dark] {
@@ -90,9 +91,10 @@ li {
   color: var(--text-color) !important;
 }
 
+.ShoutboxWidget-messages,
 html {
   scrollbar-width: thin;
-  scrollbar-color: #00a185 transparent;
+  scrollbar-color: var(--primary-color) transparent;
 }
 
 html::-webkit-scrollbar {
@@ -103,13 +105,13 @@ html::-webkit-scrollbar-track {
 }
 
 html::-webkit-scrollbar-thumb {
-  background: #00a185;
+  background: var(--primary-color);
   border-radius: 4px;
   min-width: 8px;
 }
 
 html::-webkit-scrollbar-thumb:hover {
-  background: #00d4a8;
+  background: var(--primary-color-hover);
   box-shadow: 0 0 4px rgba(0, 161, 133, 0.4);
 }
 .CategoriesPage .topNav {
@@ -123,7 +125,7 @@ html::-webkit-scrollbar-thumb:hover {
   padding-top: 30px;
 
   scrollbar-width: thin;
-  scrollbar-color: #00a185 transparent;
+  scrollbar-color: var(--primary-color) transparent;
 }
 
 .CategoriesPage .topNav::-webkit-scrollbar {
@@ -135,13 +137,13 @@ html::-webkit-scrollbar-thumb:hover {
 }
 
 .CategoriesPage .topNav::-webkit-scrollbar-thumb {
-  background: #00a185;
+  background: var(--primary-color);
   border-radius: 3px;
   min-height: 8px;
 }
 
 .CategoriesPage .topNav::-webkit-scrollbar-thumb:hover {
-  background: #00d4a8;
+  background: var(--primary-color-hover);
   box-shadow: 0 0 4px rgba(0, 161, 133, 0.4);
 }
 
@@ -566,6 +568,36 @@ ul.NotificationGroup-content {
   text-decoration: auto;
 }
 
+// #modern-footer .row {
+//     max-width: 1200px !important;
+// }
+
+#modern-footer .Social {
+    background-color: var(--primary-color) !important;
+}
+#modern-footer .Social:hover {
+    background-color: var(--button-primary-bg-hover) !important;
+}
+
+#modern-footer .foo-bottom {
+  background: var(--primary-color) !important;
+  border-bottom: 5px solid var(--primary-color);
+}
+
+#modern-footer div {
+  background-color: var(--control-bg-light) !important;
+}
+
+#modern-footer a:hover {
+    color: var(--primary-color) !important;
+    font-weight: normal !important;
+}
+
+#modern-footer p,
+#modern-footer .foo-bottom p {
+    color: var(--text-color) !important;
+}
+
 .MobileTab {
   background: var(--control-bg-light) !important;
   box-shadow: 0 -2px 6px var(--shadow-color) !important;
@@ -594,9 +626,9 @@ ul.NotificationGroup-content {
 
 @media (min-width: 992px) {
   .TagTiles > li {
-    width: 30% !important;
+    // width: 30% !important;
     border-radius: @border-radius !important;
-    margin: 15px;
+    // margin: 15px;
   }
 
   .sideNav,
@@ -618,10 +650,17 @@ ul.NotificationGroup-content {
 
 @media (max-width: 991px) and (min-width: 768px) {
   .TagTiles > li {
-    width: 45% !important;
+    // width: 45% !important;
     border-radius: @border-radius !important;
-    margin: 15px;
+    // margin: 15px;
   }
+}
+
+@media (min-width: 767.98px) {
+    #modern-footer .foo-mid {
+        flex: 0 0 28% !important;
+        max-width: 28% !important;
+    }
 }
 
 @media (max-width: 767px) {
@@ -632,7 +671,7 @@ ul.NotificationGroup-content {
 
   .TagTiles > li {
     border-radius: @border-radius !important;
-    margin: 15px;
+    // margin: 15px;
   }
 
   .DiscussionListItem-title {
