@@ -128,6 +128,11 @@ html::-webkit-scrollbar-thumb:hover {
   scrollbar-color: var(--primary-color) transparent;
 }
 
+.Dropdown-menu>li>a {
+  justify-content: flex-start !important;
+}
+
+
 .CategoriesPage .topNav::-webkit-scrollbar {
   height: 10px;
 }
@@ -629,7 +634,7 @@ ul.NotificationGroup-content {
   .TagTiles > li {
     // width: 30% !important;
     border-radius: @border-radius !important;
-    // margin: 15px;
+    margin: 15px;
   }
 
   .sideNav,
@@ -653,16 +658,16 @@ ul.NotificationGroup-content {
   .TagTiles > li {
     // width: 45% !important;
     border-radius: @border-radius !important;
-    // margin: 15px;
+    margin: 15px;
   }
 }
 
-@media (min-width: 767.98px) {
-    #modern-footer .foo-mid {
-        flex: 0 0 28% !important;
-        max-width: 28% !important;
-    }
-}
+// @media (min-width: 767.98px) {
+//     #modern-footer .foo-mid {
+//         flex: 0 0 28% !important;
+//         max-width: 28% !important;
+//     }
+// }
 
 @media (max-width: 767px) {
 
