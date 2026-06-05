@@ -153,21 +153,20 @@ html::-webkit-scrollbar-thumb:hover {
 }
 
 body,
+#drawer,
+#app-navigation,
+#modern-footer div,
 #app .App-content {
   background-color: var(--control-bg-light) !important;
 }
 
+.CompactWidget-stat--online i,
 .AccessTokensList-item--active .AccessTokensList-item-title-sub {
     color: var(--primary-color);
 }
 
 .IndexPage-toolbar {
     align-items: center;
-}
-
-#drawer,
-#app-navigation {
-  background-color: var(--control-bg-light);
 }
 
 [data-colored-header=true] #drawer,
@@ -343,10 +342,6 @@ aside.DiscussionPage-list {
   background: #1b1b1b;
 }
 
-.on.Checkbox--switch .Checkbox-display {
-  background: var(--button-primary-bg);
-}
-
 .on .Checkbox-display {
   color: var(--button-primary-bg);
 }
@@ -355,11 +350,14 @@ aside.DiscussionPage-list {
   background-color: rgba(0, 161, 133, 0.23) !important;
 }
 
+.on.Checkbox--switch .Checkbox-display,
+.emojionearea-filter.active,
 .Post--BestAnswer {
   background: var(--button-primary-bg) !important;
 }
 
 .Badge--bestAnswer,
+.emojibtn:hover,
 .BadgeCard-indicator--owned {
   background-color: var(--button-primary-bg) !important;
 }
@@ -373,6 +371,7 @@ aside.DiscussionPage-list {
   background-size: cover;
 }
 
+.emojionearea-category-title,
 .NotificationGrid td,
 .NotificationGrid th {
   color: var(--text-color) !important;
@@ -384,26 +383,10 @@ aside.DiscussionPage-list {
   font-size: 13px !important;
 }
 
-.fa-circle {
-  color: var(--button-primary-bg) !important;
-}
-
-.emojionearea-category-title {
-  color: var(--text-color) !important;
-}
-
 .emojionearea-category-title,
 .emojionearea-picker,
 .emojionearea-filters {
   background: var(--control-bg-light) !important;
-}
-
-.emojionearea-filter.active {
-  background: var(--button-primary-bg) !important;
-}
-
-.emojibtn:hover {
-  background-color: var(--button-primary-bg) !important;
 }
 
 #Combined-Shape,
@@ -444,6 +427,7 @@ a[data-fancybox="single"] > img {
   border: 1px solid var(--control-bg-light) !important;
 }
 
+.fa-circle,
 .fancybox__toolbar {
   color: var(--button-primary-bg) !important;
 }
@@ -609,6 +593,7 @@ ul.NotificationGroup-content {
 #modern-footer .Social {
     background-color: var(--primary-color) !important;
 }
+
 #modern-footer .Social:hover {
     background-color: var(--button-primary-bg-hover) !important;
 }
@@ -616,10 +601,6 @@ ul.NotificationGroup-content {
 #modern-footer .foo-bottom {
   background: var(--control-bg-light) !important;
   border-bottom: 5px solid var(--primary-color);
-}
-
-#modern-footer div {
-  background-color: var(--control-bg-light) !important;
 }
 
 #modern-footer a:hover {
