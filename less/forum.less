@@ -14,7 +14,7 @@
   --primary-color-hover: #00d4a8;
 }
 
-[data-theme^=dark] {
+[data-theme^="dark"] {
   --muted-color: #f1f1f1;
   --muted-more-color: #dedede;
   --all-bg-color: #2c3332;
@@ -25,7 +25,7 @@
   --header-bg: #2c3332;
 }
 
-[data-theme=light-hc] {
+[data-theme="light-hc"] {
   --muted-color: #000000;
   --muted-more-color: #1b1b1b;
   --all-bg-color: #ffffff;
@@ -36,7 +36,7 @@
   --header-bg: #ffffff;
 }
 
-[data-theme=dark-hc] {
+[data-theme="dark-hc"] {
   --muted-color: #ffffff;
   --muted-more-color: #e0e0e0;
   --all-bg-color: #000000;
@@ -70,13 +70,12 @@ li {
 }
 
 .NotificationsDropdown .Dropdown-toggle .Button-label {
-    margin-left: 7px !important;
+  margin-left: 7px !important;
 }
 
 .SessionDropdown .Dropdown-toggle .Avatar {
-    margin: -2px 6px -2px -6px !important;
+  margin: -2px 6px -2px -6px !important;
 }
-
 
 .FlarumBlog-Article-Author-background,
 .FlarumBlogItem
@@ -137,10 +136,9 @@ html::-webkit-scrollbar-thumb:hover {
   scrollbar-color: var(--primary-color) transparent;
 }
 
-.Dropdown-menu>li>a {
+.Dropdown-menu > li > a {
   justify-content: flex-start !important;
 }
-
 
 .CategoriesPage .topNav::-webkit-scrollbar {
   height: 10px;
@@ -171,28 +169,28 @@ body,
 
 .CompactWidget-stat--online i,
 .AccessTokensList-item--active .AccessTokensList-item-title-sub {
-    color: var(--primary-color) !important;
+  color: var(--primary-color) !important;
 }
 
 .CompactWidget-stat {
-    font-size: 13px !important;
-    color: var(--button-color) !important;
+  font-size: 13px !important;
+  color: var(--button-color) !important;
 }
 
 .CompactWidget-stat i {
-    font-size: 13px !important;
+  font-size: 13px !important;
 }
 
 .CompactWidget--inToolbar .CompactWidget-bar {
-    padding: 7px 12px 8px !important;
+  padding: 7px 12px 8px !important;
 }
 
 .IndexPage-toolbar {
-    align-items: center;
+  align-items: center;
 }
 
-[data-colored-header=true] #drawer,
-[data-colored-header=true] #app-navigation {
+[data-colored-header="true"] #drawer,
+[data-colored-header="true"] #app-navigation {
   background-color: transparent;
 }
 
@@ -225,7 +223,7 @@ body,
 }
 
 .FofWidgets-Widget-title-icon {
-    vertical-align: baseline !important;
+  vertical-align: baseline !important;
 }
 
 .PostBadges-item {
@@ -248,7 +246,8 @@ body,
 
 .item-like .Button:before {
   font-family:
-    "Font Awesome 5 Free", "Font Awesome 6 Free", "Font Awesome 6 Pro", "Font Awesome 7 Free", "Font Awesome 7 Pro";
+    "Font Awesome 5 Free", "Font Awesome 6 Free", "Font Awesome 6 Pro",
+    "Font Awesome 7 Free", "Font Awesome 7 Pro";
   font-weight: 600;
   font-size: 14px;
   content: "\f164";
@@ -257,7 +256,8 @@ body,
 
 .item-dislike .Button:before {
   font-family:
-    "Font Awesome 5 Free", "Font Awesome 6 Free", "Font Awesome 6 Pro", "Font Awesome 7 Free", "Font Awesome 7 Pro";
+    "Font Awesome 5 Free", "Font Awesome 6 Free", "Font Awesome 6 Pro",
+    "Font Awesome 7 Free", "Font Awesome 7 Pro";
   font-weight: 600;
   font-size: 14px;
   content: "\f165";
@@ -266,7 +266,8 @@ body,
 
 .item-reply .Button--link:before {
   font-family:
-    "Font Awesome 5 Free", "Font Awesome 6 Free", "Font Awesome 6 Pro", "Font Awesome 7 Free", "Font Awesome 7 Pro";
+    "Font Awesome 5 Free", "Font Awesome 6 Free", "Font Awesome 6 Pro",
+    "Font Awesome 7 Free", "Font Awesome 7 Pro";
   font-weight: 600;
   font-size: 15px;
   content: "\f3e5";
@@ -291,7 +292,7 @@ body,
 }
 
 .Post-body a {
-    border-bottom: none !important;
+  border-bottom: none !important;
 }
 
 .CompactWidget-bar {
@@ -317,7 +318,7 @@ body,
   margin-top: 4px;
 
   @media @phone {
-    margin: 4px 8px;
+    margin: 4px 15px;
   }
 
   .Button {
@@ -336,7 +337,14 @@ aside.DiscussionPage-list {
 
 @media @phone {
   .DiscussionListItem {
-    margin: 8px;
+    margin: 15px;
+  }
+  .Page-hero {
+    margin: 0 15px;
+  }
+  .HeroBanner-stats {
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -437,16 +445,16 @@ header.Hero.WelcomeHero {
 }
 
 .pswp__icn {
-    fill: var(--primary-color) !important;
+  fill: var(--primary-color) !important;
 }
 
 .pswp__counter {
-    color: var(--primary-color) !important;
-    text-shadow: 1px 1px 1px var(--all-bg-color) !important;
+  color: var(--primary-color) !important;
+  text-shadow: 1px 1px 1px var(--all-bg-color) !important;
 }
 
 .pswp__icn-shadow {
-    stroke: var(--all-bg-color) !important;
+  stroke: var(--all-bg-color) !important;
 }
 
 .fancybox-gallery,
@@ -618,11 +626,11 @@ ul.NotificationGroup-content {
 // }
 
 #modern-footer .Social {
-    background-color: var(--primary-color) !important;
+  background-color: var(--primary-color) !important;
 }
 
 #modern-footer .Social:hover {
-    background-color: var(--button-primary-bg-hover) !important;
+  background-color: var(--button-primary-bg-hover) !important;
 }
 
 #modern-footer .foo-bottom {
@@ -631,14 +639,14 @@ ul.NotificationGroup-content {
 }
 
 #modern-footer a:hover {
-    color: var(--primary-color) !important;
-    font-weight: normal !important;
-    text-decoration: none !important;
+  color: var(--primary-color) !important;
+  font-weight: normal !important;
+  text-decoration: none !important;
 }
 
 #modern-footer p,
 #modern-footer .foo-bottom p {
-    color: var(--text-color) !important;
+  color: var(--text-color) !important;
 }
 
 .MobileTab {
@@ -653,8 +661,8 @@ ul.NotificationGroup-content {
   color: var(--button-color) !important;
 }
 
-.MobileTab-items> li> [active="true"] {
-    color: var(--primary-color) !important;
+.MobileTab-items > li > [active="true"] {
+  color: var(--primary-color) !important;
 }
 
 .NotificationsDropdown .Dropdown-toggle .Button-label {
@@ -700,13 +708,12 @@ ul.NotificationGroup-content {
 }
 
 @media (max-width: 767.98px) {
-    .App-drawer .ThemeToggle.Button.Button--icon {
-        gap: 8px !important;
+  .App-drawer .ThemeToggle.Button.Button--icon {
+    gap: 8px !important;
   }
 }
 
 @media (max-width: 767px) {
-
   .cc-window {
     bottom: 60px;
   }
